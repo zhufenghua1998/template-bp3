@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>管理系统--bp3</title>
+    <link href="../favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../css/me.css" rel="stylesheet"/>
+    <script src="../js/functions.js"></script>
+</head>
+<body style="background-color:rgb(231,231,231);">
+ 
+    <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand bg-index" href="./index.html">管理系统</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav">
+            <li class=""><a href="./file.html">文件管理<i class="fa fa-th-large" aria-hidden="true"></i><span class="sr-only">(current)</span></a></li>
+            <li><a href="./settings.html">修改设置<i class="fa fa-cog"></i></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../index.html">前台<i class="fa fa-home"></i></a></li>
+            <li><a href="./logout">注销<i class="fa fa-sign-out" aria-hidden="true"></i></i></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  
+    </div>
+    </header>
+ <main  >
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>连接说明</h2>
+            </div>
+            <div class="col-xs-6">
+                <h2><a href="#">刷新token</a></h2>
+            </div>
+        </div>
+        <div>
+        <p>本程序需要连接到百度网盘，token每次有效期为30天</p>
+        <p>当前token有效期剩余：<b>xxx</b>天</p>
+        <p>如果您需要刷新token，请点击<b>刷新token</b></p>
+        <p>程序定时脚本容易被自动释放，您要么手动刷新，要么定期访问URL</p>
+        <p>提供自动刷新token的URL：<b>www.xxx.com/abc.html</b></p>
+        <p>如果您未授权，或更换授权，点击<b>重新授权</b></p>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>百度信息</h2>
+            </div>
+            <div class="col-xs-6">
+                <h2><a href="#">重新授权</a></h2>
+            </div>
+        </div>
+        
+        <div class="bs-example" data-example-id="bordered-table">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>项目</th>
+                  <th>数据</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>百度名称</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>网盘昵称</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>百度id</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>网盘会员</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- table-example -->
+          <p>注意：授权时，如果你的浏览器已经登录百度，本程序会自动完成授权。</p>
+    </div>
+</main>
+<footer class="copyright">
+    <div class="navbar navbar-default navbar-inverse footer-nav">
+        <p class="text-center copy-p">Copyright © bp3 <span id="year"></span></p>
+    </div>
+</footer>
+<script>
+
+    $(function (){
+        getYear();
+        fix_footer();
+    });
+
+</script>
+</body>
+</html>
